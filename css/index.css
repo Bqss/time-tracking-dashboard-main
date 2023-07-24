@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.information,
+.menus,
+.content,
+.menus {
+  padding: 1.83em;
+}
+@media (max-width: 376px) {
+  .information,
+.menus,
+.content,
+.menus {
+    padding: 2em;
+  }
+}
+
+.content {
+  background: hsl(235deg, 46%, 20%);
+  transition: 0.3s;
+}
+.content:hover {
+  background-color: hsl(235deg, 30%, 35%);
+  cursor: pointer;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(226deg, 43%, 10%);
+  color: white;
+  min-height: 100vh;
+  align-items: center;
+  font-size: 18px;
+}
+
+.box {
+  background-color: lightgray;
+}
+
+.box,
+.content,
+.person,
+.information,
+.menus {
+  border-radius: 1em;
+}
+
+.daily,
+.monthly,
+.weekly {
+  display: none;
+}
+
+h1 {
+  font-size: 2.7em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.1em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8em;
+  color: hsl(236deg, 100%, 87%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+button svg {
+  fill: hsl(236deg, 100%, 87%);
+  transition: 0.3s;
+}
+button svg:hover {
+  fill: white;
+  cursor: pointer;
+}
+
+main {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+main .container {
+  width: min(1110px, 90%);
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+  gap: 1.3em;
+}
+@media (max-width: 590px) {
+  main .container {
+    margin: 5em 0;
+  }
+}
+main .person {
+  background-color: hsl(235deg, 46%, 20%);
+  grid-row: span 2;
+}
+main .person .avatar img {
+  width: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+main .person .information {
+  background-color: #5746ea;
+  flex: 70%;
+}
+main .person .information .identity {
+  margin-top: 2em;
+}
+@media (max-width: 590px) {
+  main .person .information {
+    flex-direction: row;
+    gap: 1em;
+  }
+  main .person .information h2 {
+    font-size: clamp(0.9em, 5.5vw, 2.1em);
+  }
+  main .person .information .identity {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+main .person .menus {
+  flex: 30%;
+  justify-content: space-around;
+}
+main .person .menus li {
+  color: hsl(235deg, 45%, 61%);
+}
+main .person .menus li:hover {
+  color: white;
+  cursor: pointer;
+}
+main .person .menus li.active {
+  color: white;
+}
+@media (max-width: 590px) {
+  main .person .menus {
+    flex-direction: row;
+  }
+}
+main .box {
+  height: 255px;
+  position: relative;
+}
+main .box .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .box .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .box.Work {
+  background: url(./../assets/images/icon-work.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: hsl(15deg, 100%, 70%);
+}
+main .box.Play {
+  background: url(./../assets/images/icon-play.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: hsl(195deg, 74%, 62%);
+}
+main .box.Study {
+  background: url(./../assets/images/icon-study.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: hsl(348deg, 100%, 68%);
+}
+main .box.Exercise {
+  background: url(./../assets/images/icon-exercise.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: hsl(145deg, 58%, 55%);
+}
+main .box.Social {
+  background: url(./../assets/images/icon-social.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: #7235d1;
+}
+main .box.SelfCare {
+  background: url(./../assets/images/icon-self-care.svg);
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-color: hsl(43deg, 84%, 65%);
+}
+@media (max-width: 590px) {
+  main .box {
+    height: 200px;
+  }
+}/*# sourceMappingURL=index.css.map */

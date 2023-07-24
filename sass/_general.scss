@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+$Lightorange : hsl(15, 100%, 70%);    // work
+$Softblue : hsl(195, 74%, 62%);    //play
+$Lightred : hsl(348, 100%, 68%);   //study
+$Limegreen : hsl(145, 58%, 55%);   //exercise
+$Violet : #7235d1;   // social
+$Softorange: hsl(43, 84%, 65%); //self care
+
+
+$p : hsl(235, 45%, 61%);
+$Verydarkblue: hsl(226, 43%, 10%);
+$Darkblue: hsl(235, 46%, 20%);
+$Desaturatedblue: #5746ea;
+$PaleBlue: hsl(236, 100%, 87%);
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+*::after ,
+*::before{
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.information,
+.menus,
+.content,
+.menus{
+    padding: 1.83em;
+    @media(max-width: 376px ){
+        padding: 2em;
+    }
+}
+.content{
+    background: $Darkblue;
+    transition: .3s;
+    &:hover{
+        background-color: hsl(235, 30%, 35%);
+        cursor: pointer;
+    }
+}
+
+body{
+
+    font-family: 'Rubik',sans-serif;
+    background: $Verydarkblue;
+    color: white;
+    min-height: 100vh;
+    align-items: center;
+    font-size: 18px;
+    
+}
+.box{
+    background-color: lightgray;
+}
+
+.box,
+.content,
+.person,
+.information,
+.menus{
+    border-radius: 1em;
+}
+
+.daily,
+.monthly,
+.weekly{
+    display: none;
+}
+h1{
+    font-size: 2.7em;
+    font-weight: 400;
+}
+h2{
+    font-size: 2.1em;
+    font-weight: 400;
+}
+p{
+    font-size: .8em;
+    color: $PaleBlue;
+}
+button{
+    background-color: transparent;
+    border: none;
+    
+    & svg{
+        fill : hsl(236deg, 100%, 87%);
+        transition: .3s;
+        &:hover {
+            fill: white;
+            cursor: pointer;
+        }
+    }
+
+}

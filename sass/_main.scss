@@ -1,0 +1,133 @@
+@use 'general' as g;
+main{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    .container{
+        width: min( 1110px , 90%);
+        grid-template-columns: repeat(auto-fill, minmax(255px,1fr));
+        grid-template-rows: repeat(2,1fr);
+        margin: 0 auto;
+        gap: 1.3em;
+        
+        
+        @media(max-width : 590px){
+            margin: 5em 0;
+
+        }
+    }
+    .person{    
+        background-color: g.$Darkblue;
+        grid-row: span 2;
+        .avatar img{
+            width: 70px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        .information{
+            background-color: g.$Desaturatedblue;
+            flex: 70%;
+            
+            .identity{
+                margin-top: 2em;
+            }
+            @media(max-width : 590px){
+                flex-direction: row;
+                gap: 1em;
+                h2{
+                    font-size: clamp(.9em , 5.5vw ,2.1em);
+                }
+                .identity{
+                    margin-top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+            }
+            
+        }
+        .menus{
+            flex: 30%;
+            justify-content: space-around;
+            li{
+                color: g.$p;
+                &:hover{
+                    color: white;
+                    cursor: pointer;
+                }
+                &.active{
+                    color: white;
+                }
+            }
+            @media(max-width : 590px){
+                flex-direction: row;
+
+            }
+        }
+
+    }
+    .box{
+        height: 255px;
+        position: relative;
+        .content{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        &.Work{
+            background: url(./../assets/images/icon-work.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Lightorange;
+        }
+        &.Play{
+            background: url(./../assets/images/icon-play.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Softblue;
+        }
+        &.Study{
+            background: url(./../assets/images/icon-study.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Lightred;
+        }
+        &.Exercise{
+            background: url(./../assets/images/icon-exercise.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Limegreen;
+        }
+        &.Social{
+            background: url(./../assets/images/icon-social.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Violet;
+        }
+        &.SelfCare{
+            background: url(./../assets/images/icon-self-care.svg);
+            background-position: 90% 0;
+            background-repeat: no-repeat;
+            background-color: g.$Softorange;
+        }
+        @media(max-width : 590px){
+            height: 200px;
+
+        }
+        
+    }
+}
